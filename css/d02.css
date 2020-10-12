@@ -1,0 +1,54 @@
+/*css ap dung bai tap ngay thu 2*/
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:gainsboro;
+}
+
+p{
+    margin-bottom: 1em;
+}
+
+li{
+    padding: 1em;
+}
+
+h2{
+    text-shadow: 3px 3px 3px gray;
+    color: peru;
+    text-indent: 2rem;
+}
+
+/* dinh nghia class selector cho phan the khoi div*/
+.noidung
+{
+    width: 60%;
+    margin: auto;
+}
+
+/*dinh nghia id selector*/
+#phuc{
+    font-style: italic;
+    text-align: justify;
+}
+
+/*personal class*/
+a:hover{
+    background-color: firebrick;
+    color: gainsboro;
+}
+
+a:link{
+    color: green;
+}
+a:visited{
+    color: hotpink;
+}
+
+/*ki tu dau tien*/
+p::first-letter{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px gray;
+    color: orange;
+}
