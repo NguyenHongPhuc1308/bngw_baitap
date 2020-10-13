@@ -1,0 +1,15 @@
+*{font-family: 'Segoe UI';}
+
+#p1{
+    text-indent: 3em;
+    background-color: rgb(70, 168, 170);
+}
+#p2{
+    padding: 2em;
+    background-color: forestgreen;
+}
+#p3{
+    margin: 2em;
+    padding: 2em;
+    background-color: fuchsia;
+}

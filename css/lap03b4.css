@@ -1,0 +1,11 @@
+.hoa{
+    height: 100px;
+    width: 90px;
+    padding: 1em;
+    float: left;
+    border: deeppink solid thin;
+    margin: 1em 2em 1em 3em;
+}
+ p{
+     padding: 2em;
+ }

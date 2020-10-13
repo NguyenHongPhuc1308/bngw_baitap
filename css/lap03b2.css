@@ -1,0 +1,22 @@
+*{font-family: Cambria;}
+h1{
+    color: rgb(30, 218, 30);
+}
+h3{
+    color: darkmagenta;
+}
+
+.demo{
+    color: darkslateblue;
+}
+
+.name{
+    color: dodgerblue;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover { color: darkorange ;}
