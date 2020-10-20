@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            padding: 2em;
+            border: black solid thin;
+            margin-top: 2em;
+            margin-right: 30em;
+        }
+
+        input[ type= "submit"]{
+            background-color: green;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: green; text-align: center;">SIGN UP</h1>
+    <h2 style="color: orangered;">Your basic info</h2>
+
+    <form action="./lap8_homework.html">
+        Name: <br>
+        <input type="text" name="name" id="name" required><br><br>
+    
+        Email: <br>
+        <input type="email" name="mail" id="mail" required> <br><br>
+    
+        Password: <br>
+        <input type="password" name="pass" id="pass" required> <br><br>
+    
+        Age: <br>
+        <input type="radio" name="un18" id="un18" required> Under 18 <br>
+        <input type="radio" name="18" id="18" required> 18 or older <br><br>
+    
+        <p style="font-weight: bold; color: darkmagenta;">Your profile</p>
+        Bioggraphy: <br>
+        <input type="text" name="bio" id="bio"><br><br>
+    
+        Job Role:
+        <select name="use_job" id="job">
+            <optgroup label="Web">
+                <option value="Font-End Developver">Font-End Developer</option>
+                <option value="PHP Developer">PHP Developer</option>
+                <option value="Python Developer">Python Developer</option>
+                <option value="Ralls Developer">Ralls Developer</option>
+                <option value="Web Designer">Web Designer</option>
+                <option value="WoldPress Developer">WoldPress Developer</option>
+            </optgroup>
+    
+            <optgroup label="Mobile">
+                <option value="Androild Developer">Androild Developer</option>
+                <option value="IOS Developer">IOS Developer</option>
+                <option value="Mobile Designer">Mobile Designer</option>
+            </optgroup>
+    
+            <optgroup label="Bussiness">
+                <option value="Bussiness Owner"> Bussiness Owner</option>
+                <option value="Freelancer">Freelancer</option>
+            </optgroup>
+    
+            <optgroup label="Other">
+                <option value="Secretary">Secretary</option>
+                <option value="Maintenance">Maintenance</option>
+            </optgroup>
+        </select> <br><br>
+    
+            <input type="submit" value="Sign Up"></form>
+</body>
+
+</html>
