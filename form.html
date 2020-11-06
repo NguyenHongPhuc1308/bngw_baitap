@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.5.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-5">
+                <h2>Sign up</h2>
+                <hr>
+
+
+                <form action="" role="form" id="formDK" name="formDK">
+
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" id="mail" name="mail" placeholder="Inut email" required
+                            value="phuc@gmail.com">
+
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Inut password"
+                            required value="123">
+
+                        <label for="">Password-confilm</label>
+                        <input type="password" class="form-control" id="pass2" name="pass2"
+                            placeholder="Inut password-condilm" required value="123">
+
+                        <label for="">Location</label>
+                        <select name="location" id="location">
+                            <option value="Sai Gon ne !!">Sai Gon</option>
+                            <option value="Ha Noi ne !!">Ha Noi</option>
+                            <option value="Da Nang ne !!">Da Nang</option>
+                        </select>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-success">Reset</button>
+                </form>
+
+
+
+
+            </div>
+
+            <div class="col--md-5">
+
+                <div class="page-header">
+                    <h1>Profile <small>information</small></h1>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body" id="profile">
+                    ____
+
+                </div>
+                <img src="../image/images/hoa/espresso1.jpg" alt="" width="30%">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            //lap trinh su kien submit
+            $("#formDK").submit(function () {
+
+                //lay gia tri cua email
+                let email = $("#mail").val();
+                //lay gia tri password
+                let pass1 = $("#pass1").val();
+                let pass2 = $("#pass2").val();
+                //lay gia tri trong o location
+                let location = $("#location").val();
+
+                //kiem tra email
+                let re = /^\w+@\w+(\.\w+)+$/
+                if (re.test(email) == false) {
+                    alert("E mail khong hop le !!! \n Vui long nhap lai.");
+                    return false;
+                }
+
+                //kiem tra giong nhau giau pass1 va pass2
+                if (pass1.trim().length < 3) {
+                    alert("Pass khong hop le!!! \nPass phai co it nhat 3 ki tu, vui long nhap lai.");
+                    $("#pass1").forcus();
+                    return false;
+                }
+                if (pass1 != pass2) {
+                    alert("Pass khong giong nhau !!! \nVui long nhap lai.");
+                    $("#pass2").forcus();
+                    return false;
+                }
+
+                let s = `<b>Email: </b> ${email} <br>`;
+                s += `<b>Password: </b> ${pass1} <br>`;
+                s += `<b>Location: </b> ${location} <br>`;
+
+                $("#profile").html(s);
+
+                alert("Dang ki tai khoang thanh cong !!!")
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
