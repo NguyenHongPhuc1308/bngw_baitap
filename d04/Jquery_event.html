@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <form action="" id="formBill">
+                    <h2>Order</h2>
+                    <hr>
+
+                    <div class="form-group">
+                        <label for="">Username</label>
+
+                        <input type="text" name="user" id="user" class="form-control" required="required"
+                            value="Hong Phuc" title="Nhap Username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Product</label>
+                        <select name="product" id="product" class="form-control" required>
+                            <option value="">---Select product---</option>
+                            <option value="15000">Banh su</option>
+                            <option value="20000">Banh Socola</option>
+                            <option value="25000">Banh tart</option>
+                            <option value="10000">Banh lo tai heo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Unit Price</label>
+
+                        <input type="number" name="price" id="brice" class="form-control" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Quanlity</label>
+
+                        <input type="number" name="qty" id="qty" class="form-control" value="1" min="1" max="100"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Amount</label>
+
+                        <input type="number" name="am" id="am" class="form-control" readonly>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-success">Reset</button>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+
+            <div class="col-md-6">
+                <img src="../image/images/cake.jpg" alt="Beaf Steak" style="width: 90%;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#product, #qty").change(function () {
+                //lay gia tri ta chon trong o product
+                let price = $("#product").val();
+
+                //gan cho o price
+                $("#brice").val(price);
+
+                //lay so luong trong o qty
+                let qty = $("#qty").val();
+
+                //tinh thanh tien va dua vao o amount
+                $("#am").val(price * qty);
+
+
+
+                $("#formBill").on(
+                    "submit", function (e) {
+                        e.preventDefault();
+
+                        //lay du lieu ten khach hang
+                        let user = $("#user").val();
+
+                        //lay ten san pham dat mua
+                        let productName = $("#product option:selected").text();
+
+                        //lay don gia san pham
+                        let price = $("#product").val();
+
+                        //lay so luong dat mua 
+                        let qty = $("#qty").val();
+
+                        //tinh thanh tien 
+                        let am = qty * price;
+
+                        //dua tat ca vao mang 
+                        let a = [];
+                        a.push("Bill Note");
+                        a.push("----------");
+                        a.push(`Khach hang: ${user}`);
+                        a.push(`San pham: ${productName}`);
+                        a.push(`Don gia: ${price}`);
+                        a.push(`So luong: ${qty}`);
+                        a.push("-----------");
+                        a.push(`Tong tien: ${am}`);
+
+                        alert(a.join("\n"));
+                    }
+                );
+
+            });
+        });
+    </script>
+</body>
+
+</html>
