@@ -2,21 +2,17 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.mau1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 500px;
-    font-size: 2rem;
-    color: aqua;
-}
+    .team{
+        text-align: center;
+        font-size: xx-large;
+        font-weight: 300;
+        color: darkslategrey;
+        text-shadow: 2px 2px 2px gray;
+    }
+
 
 html {
     box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
 }
 
 .column {
@@ -37,11 +33,6 @@ html {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
-    padding: 0 16px;
-}
-
-.container::after,
 .row::after {
     content: "";
     clear: both;
@@ -70,12 +61,13 @@ html {
 .size{
     margin: auto;
 }
-body{
-    background-image: url(/img/127207996_2841577026072235_5859629865003728934_n.jpg);
-    background-size: cover;
-}
+
 .name{
     font-size: 200%;
     font-weight: bold;
-    text-align: center;
+
+}
+h4{
+    font-size: 200%;
+    font-weight: bold;
 }
