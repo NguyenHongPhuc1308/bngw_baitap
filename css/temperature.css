@@ -88,3 +88,13 @@ body{
     background-image: url(../image/background.jpg);
     background-size: cover;
 }
+
+.anh{
+    width: 20%;
+    margin-right: 3rem;
+}
+
+.size{
+    margin-left: 20px;
+    text-align: center;
+}
